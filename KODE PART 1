@@ -1,0 +1,104 @@
+import os
+
+loop = True
+
+
+while loop:
+	def menu() :
+		print("\n-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+		print("Program Pemesanan Tiket BRT Semarang Hebat!")
+		print("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+		print("1. Terminal Mangkang — Terminal Penggaron")
+		print("2. Terminal Terboyo — Terminal Sisemut, Ungaran")
+		print("3. Pelabuhan Tanjung Emas — Elizabeth")
+		print("4. Terminal Cangkiran — Stasiun Semarang Tawang")
+		print("5. Exit")
+		print("\n------------------------------------------")
+		
+	def pesan():
+		jmlh_tiket = int(input("Masukan jumlah tiket : "))
+		num_array = list()
+		num = input("Berapa orang yang ingin memesan tiket ? : ")
+		print ("Masukkan nama Pemesan : ")
+		for i in range (int(num)):
+			i += 1
+			n = input("orang ke {} :".format(i))
+			num_array.append(str(n)) 
+		total_tiket = jmlh_tiket*harga
+		print("\n----------------------------------------------")
+		print("Anda telah berhasil melakukan pembelian tiket ")
+		print("----------------------------------------------")
+		print ("Nama Pemesan :".format(len(num_array)))
+		for a in num_array:
+			print (("- {}").format(a))
+		print("Total Harga","Rp.",(total_tiket))
+	
+
+	menu()
+	tujuan = int(input("Masukan Pilihan [1-5] : "))
+		
+	if ((tujuan) == 1):
+		print("\n-------------------------------------------------------")
+		print("\nKode  Nama\tTujuan\t\tHarga")
+		print("\n      Bus\tPemberhentian\t\tTiket")
+		print("\n-------------------------------------------------------")
+		print("\n101.  Hino-R250\tTerminal Mangkang — Terminal Penggaron \tRp10.000")
+		print("\n102.  Hino-F130\tTerminal Mangkang — Terminal Penggaron \tRp7.000")
+		print("\n103.  Hino-Z15\tTerminal Mangkang — Terminal Penggaron \tRp5.000")
+		print("\n-------------------------------------------------------")
+		no_bus = int(input("Masukkan kode bus : "))
+		
+		
+		if ((no_bus) == 101):
+			harga = 10000
+			print("")
+			print("---------------------------------")
+			print("Anda memilih kode bus",+int(no_bus))
+			print("---------------------------------")
+			pesan()
+			
+			
+			
+		elif ((no_bus) == 102):
+			harga = 7000
+			print("")
+			print("---------------------------------")
+			print("anda memilih kode bus",+int(no_bus))
+			print("---------------------------------")
+			pesan()
+			
+		elif ((no_bus) == 103):
+			harga = 5000
+			print("")
+			print("---------------------------------")
+			print("anda memilih kode bus",+int(no_bus))
+			print("---------------------------------")
+			pesan()
+			
+		else :
+			print("kode bus tidak ada dalam daftar")
+			
+			
+	elif ((tujuan) == 2):
+		print("\n----------------------------------------------------------")
+		print("\nKode  Nama\tTujuan\t\tHarga")
+		print("\n      bus\tPemberhentian\t\tTiket")
+		print("\n----------------------------------------------------------")
+		print("\n201. Hino-RK8\tTerminal Terboyo — Terminal Sisemut, Ungaran \tRp15000")
+		print("\n202. Hino-R37\tTerminal Terboyo — Terminal Sisemut, Ungaran\tRp12000")
+		print("\n203. Hino-Z30\tTerminal Terboyo — Terminal Sisemut, Ungaran \tRp10000")
+		print("\n----------------------------------------------------------")
+		no_bus = int(input("Masukan kode bus :"))
+		
+		if ((no_bus) == 201):
+			harga = 15000
+			print("")
+			print("---------------------------------")
+			print("Anda memilih kode bus",+int(no_bus))
+			print("---------------------------------")
+			pesan()
+			
+		elif ((no_bus) == 202):
+			harga = 12000
+			print("")
+			print("---------------------------------")
